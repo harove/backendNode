@@ -1,0 +1,10 @@
+    <h1>Personas</h1>
+    {{#if hayPersonas}}
+    <ul>
+        {{#each personas}}
+        <li>{{this.nombre}} {{this.edad}} </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>No hay personas para mostrar</p>
+    {{/if}}

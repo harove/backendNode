@@ -1,0 +1,13 @@
+{
+  "type":"module",
+  "name": "login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/login.js",
+  "scripts": {
+    "dev": "nodemon -e 'js' ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

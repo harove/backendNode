@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "pepe",
+    "rol": "estudiante"
+  },
+  {
+    "id": 2,
+    "nombre": "luigy",
+    "rol": "estudiante"
+  },
+  {
+    "id": 3,
+    "nombre": "Ariel",
+    "rol": "profe"
+  },
+  {
+    "id": "a47ee776-9d7f-4b4c-8422-60b80b2cda23",
+    "nombre": "Edgar",
+    "rol": "tutor"
+  }
+]

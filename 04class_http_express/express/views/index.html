@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Personas</h1>
+    <h2>Registro</h2>
+    <form action="/personas" method="post">
+        <input type="text" name="nombre" id="inputNombre">
+        <select name="rol" id="inputRol">
+            <option value="estudiante">Estudiante</option>
+            <option value="profe">Profe</option>
+            <option value="tutor">Tutor</option>
+        </select>
+        <input type="submit" value="registrar">
+    </form>
+</body>
+
+<script>
+    document.querySelector('form').addEventListener('submit', e => {
+        e.preventDefault()
+        console.log({
+            nombreFront: document.querySelector('#inputNombre').value,
+            rolFront: document.querySelector('#inputRol').value
+        })
+        fetch('/personas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: document.querySelector('#inputNombre').value,
+                rol: document.querySelector('#inputRol').value
+            })
+        }).then(res => {
+            if (res.status === 200) {
+                return res.json()
+            } else {
+                throw new Error('error en el registro')
+            }
+        }).then(data => {
+            alert('registro exitoso')
+            console.log(data)
+        })
+    })
+</script>
+
+</html>

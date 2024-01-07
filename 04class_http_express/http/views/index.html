@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hola Mundo desde un file
+    <form action="/personas" method="post">
+        <input type="text" name="nombre" id="inputNombre">
+        <input type="text" name="rol" id="inputRol">
+        <select name="rol" id="selectRole">
+            <option value="estudiante">Estudiante</option>
+            <option value="profe">profe</option>
+            <option value="tutor">tutor</option>
+        </select>
+        <input type="submit" value="registrar">
+    </form>
+</body>
+
+<!-- <script>
+    document.querySelector('form').addEventListener('submit',e => {
+        e.preventDefault()
+        fetch('/personas', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: document.querySelector('#inputNombre').value
+            })
+        }).then(res => {
+            if (res.status === 200){
+                return res.json()
+            }else{
+                throw new Error('error en el registro')
+            }
+        })
+        .then(persona => {
+            alert('registro exitoso')
+            console.log(persona)
+        })
+    })
+</script> -->
+
+</html>
